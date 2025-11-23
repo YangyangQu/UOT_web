@@ -1,0 +1,52 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #f7f9fb; /* 淡淡的灰色背景 */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+h1 { font-family: 'Google Sans', sans-serif; font-size: 2.2rem; margin-bottom: 10px; color: #2c3e50; }
+h2 { font-size: 1.4rem; font-weight: 400; color: #555; margin-top: 0; }
+h3 { font-family: 'Google Sans', sans-serif; color: #2c3e50; border-left: 4px solid #3498db; padding-left: 10px; margin-top: 40px;}
+
+.authors { margin-top: 20px; color: #666; }
+.affiliations { font-size: 0.9rem; color: #888; }
+
+/* 图片样式 */
+figure { margin: 0; text-align: center; }
+figure img { max-width: 100%; border-radius: 8px; border: 1px solid #eee; }
+figcaption { margin-top: 10px; font-size: 0.9rem; color: #666; font-style: italic; }
+
+/* 表格样式 (核心) */
+.table-container { overflow-x: auto; margin-top: 20px; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+th, td { padding: 15px; text-align: center; border-bottom: 1px solid #eee; vertical-align: top; }
+th { background-color: #f8f9fa; font-weight: 600; color: #444; }
+tr:last-child td { border-bottom: none; }
+
+/* 音频播放器样式 */
+audio { width: 100%; min-width: 120px; height: 40px; }
+.desc { font-size: 0.8rem; color: #888; margin-top: 5px; }
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .container { width: 100%; box-shadow: none; }
+    audio { width: 100px; }
+}

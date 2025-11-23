@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPACE: Zero-Shot Voice Attribute Editing</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>SPACE: Subspace Projected Attribute Control & Editing</h1>
+        <h2>Zero-Shot Voice Conversion via Geometric Disentanglement</h2>
+
+        <div class="authors">
+            <p>
+                <span class="author">Anonymous Author(s)</span><sup>1</sup>
+            </p>
+            <p class="affiliations">
+                <sup>1</sup>Under Review for ACL/ICASSP 202X
+            </p>
+        </div>
+    </header>
+
+    <section id="abstract">
+        <h3>Abstract</h3>
+        <p>
+            We present <strong>SPACE</strong>, a novel framework for zero-shot voice attribute editing.
+            Unlike previous methods that rely on black-box generation, SPACE explicitly disentangles
+            gender and accent subspaces within the WavLM feature space. By leveraging
+            <strong>Unbalanced Optimal Transport (UOT)</strong> for geometric steering, our method achieves
+            superior disentanglement and content preservation compared to KNN-VC and VITS-based approaches.
+        </p>
+    </section>
+
+    <section id="architecture">
+        <h3>Model Architecture</h3>
+        <figure>
+            <img src="images/space_arch.png" alt="SPACE Architecture">
+            <figcaption>Figure 1: The architecture of SPACE. (Top) Offline Geometry Learning. (Bottom) Online Inference.</figcaption>
+        </figure>
+    </section>
+
+    <section id="demos">
+        <h3>Audio Samples</h3>
+        <p class="note">
+            Below are zero-shot conversion samples on unseen speakers from the VCTK dataset.
+        </p>
+
+        <div class="table-container">
+            <h4>Task 1: Accent Conversion (American &rarr; Indian)</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Source (Input)</th>
+                        <th style="width: 20%">Target (Reference)</th>
+                        <th style="width: 20%">Baseline (KNN-VC)</th>
+                        <th style="width: 20%">Baseline (FreeVC)</th>
+                        <th style="width: 20%"><strong>Ours (SPACE)</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <audio controls src="samples/p225_001_src.wav"></audio>
+                            <div class="desc">Text: "Please call Stella."</div>
+                        </td>
+                        <td>
+                            <audio controls src="samples/p226_002_ref.wav"></audio>
+                            <div class="desc">Accent: Indian (M)</div>
+                        </td>
+                        <td><audio controls src="samples/p225_to_p226_knn.wav"></audio></td>
+                        <td><audio controls src="samples/p225_to_p226_freevc.wav"></audio></td>
+                        <td><audio controls src="samples/p225_to_p226_ours.wav"></audio></td>
+                    </tr>
+
+                    </tbody>
+            </table>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
