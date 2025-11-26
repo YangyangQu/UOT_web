@@ -3,155 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPACE: Voice Attribute Editing Demo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Voice Conversion Demo Page</title>
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
     <style>
-        /* 简单补充一点内联样式，保证没有 style.css 也能看 */
-        body { font-family: 'Noto Sans', sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; color: #333; }
-        header { text-align: center; margin-bottom: 40px; }
-        h1 { font-family: 'Google Sans', sans-serif; font-size: 2.2rem; margin-bottom: 10px; }
-        h2 { font-size: 1.5rem; color: #555; font-weight: normal; }
-        .authors { color: #007bff; margin-top: 20px; }
-        section { margin-bottom: 50px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        th, td { padding: 15px; text-align: center; border-bottom: 1px solid #eee; vertical-align: top; }
-        th { background-color: #f8f9fa; font-weight: 600; }
-        audio { width: 220px; height: 40px; margin-top: 5px; }
-        .desc { font-size: 0.85rem; color: #666; margin-top: 5px; }
-        .note { background-color: #e9ecef; padding: 10px; border-radius: 5px; font-size: 0.9rem; }
-        .task-title { border-bottom: 2px solid #007bff; padding-bottom: 10px; margin-top: 40px; }
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* 1. 顶部 Header 样式 */
+        header { text-align: center; margin-bottom: 50px; }
+        h1 { font-family: 'Google Sans', sans-serif; font-size: 2.5rem; margin-bottom: 10px; }
+        h2 { font-size: 1.5rem; color: #555; font-weight: normal; margin-top: 0; }
+        .authors { color: #007bff; margin-top: 20px; font-size: 1.1rem; }
+        .affiliations { color: #666; font-size: 0.9rem; margin-top: 5px; }
+
+        /* 通用 Section 样式 */
+        section { margin-bottom: 60px; }
+        h3 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 2. 模型架构图片样式 */
+        .model-figure {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .model-figure img {
+            max-width: 90%; /* 图片宽度自适应，最大占90% */
+            height: auto;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .caption {
+            margin-top: 10px;
+            color: #666;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        /* 3. 表格和演示样式 */
+        .task-title {
+            font-size: 1.3rem;
+            color: #444;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-left: 4px solid #007bff;
+            padding-left: 10px;
+        }
+        p.note {
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        th, td {
+            padding: 15px 10px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+        th { background-color: #f8f9fa; font-weight: 600; color: #444; }
+        tr:hover { background-color: #fafafa; }
+
+        /* 播放器微调 */
+        audio { width: 200px; height: 35px; }
+        .desc { font-size: 0.8rem; color: #777; margin-top: 4px; }
+        .tag {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .tag-src { background-color: #e3f2fd; color: #0d47a1; }
+        .tag-ref { background-color: #f3e5f5; color: #4a148c; }
+        .tag-res { background-color: #e8f5e9; color: #1b5e20; }
+
     </style>
 </head>
 <body>
 
-<div class="container">
     <header>
-        <h1>SPACE: Subspace Projected Attribute Control & Editing</h1>
-        <h2>Zero-Shot Voice Conversion via Geometric Disentanglement</h2>
+        <h1>My Voice Conversion Project</h1>
+        <h2>Zero-Shot Voice Attribute Editing Demo</h2>
 
         <div class="authors">
-            <p>
-                <span class="author">Anonymous Author(s)</span>
-            </p>
-            <p class="affiliations">
-                Under Review for ACL/ICASSP 202X
-            </p>
+            <span class="author">Author Name 1</span>,
+            <span class="author">Author Name 2</span>
         </div>
+        <div class="affiliations">University Name / Institution</div>
     </header>
 
     <section id="abstract">
         <h3>Abstract</h3>
         <p>
-            We present <strong>SPACE</strong>, a novel framework for zero-shot voice attribute editing.
-            Unlike previous methods that rely on black-box generation, SPACE explicitly disentangles
-            gender and accent subspaces within the WavLM feature space. Below are the demonstrations for 
-            Accent Conversion and Gender Conversion tasks.
+            Here is the abstract of your work. We propose a new method for zero-shot voice conversion...
+            (Write your abstract content here).
         </p>
     </section>
 
-    <section id="task1">
-        <h3 class="task-title">Task 1: Accent Conversion</h3>
-        <p class="note">
-            In this task, we convert the source speaker's accent to the target accent (Indian / South African) 
-            while preserving the source speaker's timbre and identity.
+    <section id="model">
+        <h3>Model Architecture</h3>
+        <p>
+            The overview of our proposed framework. (You can describe your model briefly here).
         </p>
 
-        <div class="table-container">
+        <div class="model-figure">
+            <img src="model.png" alt="Model Architecture Diagram">
+            <div class="caption">Figure 1: The proposed architecture for attribute editing.</div>
+        </div>
+    </section>
+
+    <section id="demos">
+        <h3>Audio Samples</h3>
+        <p class="note">
+            Below are the conversion results.
+            <strong>Task 1</strong> demonstrates accent conversion, and
+            <strong>Task 2</strong> demonstrates gender attribute editing.
+        </p>
+
+        <div class="task-block">
+            <div class="task-title">Task 1: Accent Conversion (Indian & South African)</div>
+
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 30%">Source (Input)</th>
-                        <th style="width: 30%">Target Accent (Reference)</th>
-                        <th style="width: 30%"><strong>Ours (SPACE)</strong></th>
+                        <th width="33%">Source (Input)</th>
+                        <th width="33%">Indian</th>
+                        <th width="33%">South African</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <audio controls src="audio/task1_indian_source.wav"></audio>
-                            <div class="desc">Source: American English</div>
+                            <span class="tag tag-src">Source</span><br>
+                            <audio controls src="MToF/p226_014.wav"></audio>
+                            <div class="desc">American English</div>
                         </td>
                         <td>
-                            <audio controls src="audio/task1_indian_ref.wav"></audio>
-                            <div class="desc"><strong>Target: Indian Accent</strong></div>
+                            <span class="tag tag-ref">Target</span><br>
+                            <audio controls src="MToF/p226_p226_014_India.wav"></audio>
+                            <div class="desc">Indian Accent</div>
                         </td>
                         <td>
-                            <audio controls src="audio/task1_indian_result.wav"></audio>
-                            <div class="desc">Result: Converted Audio</div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <audio controls src="audio/task1_sa_source.wav"></audio>
-                            <div class="desc">Source: American English</div>
-                        </td>
-                        <td>
-                            <audio controls src="audio/task1_sa_ref.wav"></audio>
-                            <div class="desc"><strong>Target: South African Accent</strong></div>
-                        </td>
-                        <td>
-                            <audio controls src="audio/task1_sa_result.wav"></audio>
-                            <div class="desc">Result: Converted Audio</div>
+                            <span class="tag tag-res">Ours</span><br>
+                            <audio controls src="MToF/p226_p226_014 2_SA.wav"></audio>
+                            <div class="desc">Converted to Indian</div>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </section>
 
-    <section id="task2">
-        <h3 class="task-title">Task 2: Gender Conversion</h3>
-        <p class="note">
-            In this task, we edit the gender attribute of the source speech while maintaining the linguistic content.
-        </p>
+        <div class="task-block">
+            <div class="task-title">Task 2: Gender Conversion</div>
 
-        <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 30%">Source (Input)</th>
-                        <th style="width: 30%">Target Gender (Reference)</th>
-                        <th style="width: 30%"><strong>Ours (SPACE)</strong></th>
+                        <th width="33%">Source (Input)</th>
+                        <th width="33%">Target Gender (Reference)</th>
+                        <th width="33%">Converted Result (Ours)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <audio controls src="audio/task2_m2f_source.wav"></audio>
-                            <div class="desc">Source: Male Speaker</div>
+                            <span class="tag tag-src">Male</span><br>
+                            <audio controls src="MToF/p226_014.wav"></audio>
                         </td>
                         <td>
-                            <audio controls src="audio/task2_m2f_ref.wav"></audio>
-                            <div class="desc"><strong>Target: Female</strong></div>
+                            <span class="tag tag-ref">Female Ref</span><br>
+                            <audio controls src="FToM/p226_014.wav"></audio>
                         </td>
                         <td>
-                            <audio controls src="audio/task2_m2f_result.wav"></audio>
-                            <div class="desc">Result: Female Voice</div>
+                            <span class="tag tag-res">Result</span><br>
+                            <audio controls src="MToF/p226_p226_014_female.wav"></audio>
+                            <div class="desc">Converted to Female</div>
                         </td>
                     </tr>
 
                     <tr>
                         <td>
-                            <audio controls src="audio/task2_f2m_source.wav"></audio>
-                            <div class="desc">Source: Female Speaker</div>
+                            <span class="tag tag-src">Female</span><br>
+                            <audio controls src="FToM/p226_014.wav"></audio>
                         </td>
                         <td>
-                            <audio controls src="audio/task2_f2m_ref.wav"></audio>
-                            <div class="desc"><strong>Target: Male</strong></div>
+                            <span class="tag tag-ref">Male Ref</span><br>
+                            <audio controls src="MToF/p226_014.wav"></audio>
                         </td>
                         <td>
-                            <audio controls src="audio/task2_f2m_result.wav"></audio>
-                            <div class="desc">Result: Male Voice</div>
+                            <span class="tag tag-res">Result</span><br>
+                            <audio controls src="FToM/p264_p264_014_F.wav"></audio>
+                            <div class="desc">Converted to Male</div>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    </section>
 
-</div>
+    </section>
 
 </body>
 </html>
