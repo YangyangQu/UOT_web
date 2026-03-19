@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Conversion Demo Page</title>
+    <title>SPOT-AC: Subspace Optimal Transport for Training-Free Zero-Shot Accent Conversion</title>
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
     <style>
         body {
@@ -114,8 +114,8 @@
 <body>
 
     <header>
-        <h1>SPACE: Subspace Projected Attribute Control & Editing</h1>
-        <h2>Zero-Shot Voice Attribute Editing Demo</h2>
+        <h1>SPOT-AC: Subspace Optimal Transport for Training-Free Zero-Shot Accent Conversion</h1>
+        <h2>Audio Demo Page</h2>
 
         <div class="authors">
             <span class="author">Anonymous Authors</span>
@@ -126,7 +126,7 @@
     <section id="abstract">
         <h3>Abstract</h3>
         <p>
-            To do.
+            Zero-shot accent conversion is challenging because the system should modify pronunciation while preserving linguistic content and speaker traits. Many existing approaches rely on large generative models and expensive training pipelines. We present SPOT-AC, a training-free method that edits frozen WavLM frame embeddings instead of training a new voice conversion model. The method is based on a simple idea: accent-related variation can be edited in an accent-sensitive subspace with limited changes to the full representation. We learn this subspace with a one-time linear calibration, reduce its overlap with gender, and estimate a target-accent shift with unbalanced optimal transport against a target-accent bank. The shifted embeddings are then refined by retrieval and resynthesized with a frozen vocoder. Experiments on L2-ARCTIC show that SPOT-AC improves target-accent accuracy and ASR transcript consistency over accent-aware baselines, while retaining strong speaker resemblance.
         </p>
     </section>
 
@@ -154,7 +154,7 @@
             <div class="task-title">Task 1: Accent Conversion</div>
             
             <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 1: chinese__LXC_arctic_a0049</div>
+                <div class="sample-subtitle">Sample 1</div>
                 <table>
                     <thead>
                         <tr>
@@ -174,17 +174,14 @@
                             <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/chinese__LXC_arctic_a0049/to_hindi.wav"></audio>
-                            <div class="desc">Converted to Hindi</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/chinese__LXC_arctic_a0049/to_spanish.wav"></audio>
-                            <div class="desc">Converted to Spanish</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/chinese__LXC_arctic_a0049/to_vietnamese.wav"></audio>
-                            <div class="desc">Converted to Vietnamese</div>
                         </td>
                         </tr>
                     </tbody>
@@ -193,7 +190,7 @@
             
 
             <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 2: chinese__TXHC_arctic_a0010</div>
+                <div class="sample-subtitle">Sample 2</div>
                 <table>
                     <thead>
                         <tr>
@@ -213,17 +210,14 @@
                             <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/chinese__TXHC_arctic_a0010/to_hindi.wav"></audio>
-                            <div class="desc">Converted to Hindi</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/chinese__TXHC_arctic_a0010/to_spanish.wav"></audio>
-                            <div class="desc">Converted to Spanish</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/chinese__TXHC_arctic_a0010/to_vietnamese.wav"></audio>
-                            <div class="desc">Converted to Vietnamese</div>
                         </td>
                         </tr>
                     </tbody>
@@ -232,7 +226,7 @@
             
 
             <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 3: chinese__TXHC_arctic_b0508</div>
+                <div class="sample-subtitle">Sample 3</div>
                 <table>
                     <thead>
                         <tr>
@@ -252,17 +246,14 @@
                             <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/chinese__TXHC_arctic_b0508/to_hindi.wav"></audio>
-                            <div class="desc">Converted to Hindi</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/chinese__TXHC_arctic_b0508/to_spanish.wav"></audio>
-                            <div class="desc">Converted to Spanish</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/chinese__TXHC_arctic_b0508/to_vietnamese.wav"></audio>
-                            <div class="desc">Converted to Vietnamese</div>
                         </td>
                         </tr>
                     </tbody>
@@ -271,7 +262,7 @@
             
 
             <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 4: hindi__ASI_arctic_a0277</div>
+                <div class="sample-subtitle">Sample 4</div>
                 <table>
                     <thead>
                         <tr>
@@ -291,17 +282,14 @@
                             <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/hindi__ASI_arctic_a0277/to_chinese.wav"></audio>
-                            <div class="desc">Converted to Chinese</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/hindi__ASI_arctic_a0277/to_spanish.wav"></audio>
-                            <div class="desc">Converted to Spanish</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/hindi__ASI_arctic_a0277/to_vietnamese.wav"></audio>
-                            <div class="desc">Converted to Vietnamese</div>
                         </td>
                         </tr>
                     </tbody>
@@ -310,7 +298,7 @@
             
 
             <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 5: hindi__ASI_arctic_b0259</div>
+                <div class="sample-subtitle">Sample 5</div>
                 <table>
                     <thead>
                         <tr>
@@ -330,17 +318,14 @@
                             <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/hindi__ASI_arctic_b0259/to_chinese.wav"></audio>
-                            <div class="desc">Converted to Chinese</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/hindi__ASI_arctic_b0259/to_spanish.wav"></audio>
-                            <div class="desc">Converted to Spanish</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/hindi__ASI_arctic_b0259/to_vietnamese.wav"></audio>
-                            <div class="desc">Converted to Vietnamese</div>
                         </td>
                         </tr>
                     </tbody>
@@ -349,7 +334,7 @@
             
 
             <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 6: hindi__ASI_arctic_b0514</div>
+                <div class="sample-subtitle">Sample 6</div>
                 <table>
                     <thead>
                         <tr>
@@ -369,17 +354,14 @@
                             <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/hindi__ASI_arctic_b0514/to_chinese.wav"></audio>
-                            <div class="desc">Converted to Chinese</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/hindi__ASI_arctic_b0514/to_spanish.wav"></audio>
-                            <div class="desc">Converted to Spanish</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/hindi__ASI_arctic_b0514/to_vietnamese.wav"></audio>
-                            <div class="desc">Converted to Vietnamese</div>
                         </td>
                         </tr>
                     </tbody>
@@ -388,7 +370,7 @@
             
 
             <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 7: spanish__ERMS_arctic_b0272</div>
+                <div class="sample-subtitle">Sample 7</div>
                 <table>
                     <thead>
                         <tr>
@@ -408,17 +390,14 @@
                             <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/spanish__ERMS_arctic_b0272/to_chinese.wav"></audio>
-                            <div class="desc">Converted to Chinese</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/spanish__ERMS_arctic_b0272/to_hindi.wav"></audio>
-                            <div class="desc">Converted to Hindi</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/spanish__ERMS_arctic_b0272/to_vietnamese.wav"></audio>
-                            <div class="desc">Converted to Vietnamese</div>
                         </td>
                         </tr>
                     </tbody>
@@ -427,7 +406,7 @@
             
 
             <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 8: spanish__MBMPS_arctic_a0308</div>
+                <div class="sample-subtitle">Sample 8</div>
                 <table>
                     <thead>
                         <tr>
@@ -447,17 +426,14 @@
                             <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/spanish__MBMPS_arctic_a0308/to_chinese.wav"></audio>
-                            <div class="desc">Converted to Chinese</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/spanish__MBMPS_arctic_a0308/to_hindi.wav"></audio>
-                            <div class="desc">Converted to Hindi</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/spanish__MBMPS_arctic_a0308/to_vietnamese.wav"></audio>
-                            <div class="desc">Converted to Vietnamese</div>
                         </td>
                         </tr>
                     </tbody>
@@ -466,7 +442,7 @@
             
 
             <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 9: spanish__NJS_arctic_b0502</div>
+                <div class="sample-subtitle">Sample 9</div>
                 <table>
                     <thead>
                         <tr>
@@ -486,17 +462,14 @@
                             <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/spanish__NJS_arctic_b0502/to_chinese.wav"></audio>
-                            <div class="desc">Converted to Chinese</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/spanish__NJS_arctic_b0502/to_hindi.wav"></audio>
-                            <div class="desc">Converted to Hindi</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/spanish__NJS_arctic_b0502/to_vietnamese.wav"></audio>
-                            <div class="desc">Converted to Vietnamese</div>
                         </td>
                         </tr>
                     </tbody>
@@ -505,7 +478,7 @@
             
 
             <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 10: vietnamese__PNV_arctic_a0016</div>
+                <div class="sample-subtitle">Sample 10</div>
                 <table>
                     <thead>
                         <tr>
@@ -525,17 +498,14 @@
                             <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/vietnamese__PNV_arctic_a0016/to_chinese.wav"></audio>
-                            <div class="desc">Converted to Chinese</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/vietnamese__PNV_arctic_a0016/to_hindi.wav"></audio>
-                            <div class="desc">Converted to Hindi</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/vietnamese__PNV_arctic_a0016/to_spanish.wav"></audio>
-                            <div class="desc">Converted to Spanish</div>
                         </td>
                         </tr>
                     </tbody>
@@ -544,7 +514,7 @@
             
 
             <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 11: vietnamese__PNV_arctic_b0191</div>
+                <div class="sample-subtitle">Sample 11</div>
                 <table>
                     <thead>
                         <tr>
@@ -564,17 +534,14 @@
                             <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/vietnamese__PNV_arctic_b0191/to_chinese.wav"></audio>
-                            <div class="desc">Converted to Chinese</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/vietnamese__PNV_arctic_b0191/to_hindi.wav"></audio>
-                            <div class="desc">Converted to Hindi</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/vietnamese__PNV_arctic_b0191/to_spanish.wav"></audio>
-                            <div class="desc">Converted to Spanish</div>
                         </td>
                         </tr>
                     </tbody>
@@ -583,7 +550,7 @@
             
 
             <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 12: vietnamese__PNV_arctic_b0447</div>
+                <div class="sample-subtitle">Sample 12</div>
                 <table>
                     <thead>
                         <tr>
@@ -603,17 +570,14 @@
                             <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/vietnamese__PNV_arctic_b0447/to_chinese.wav"></audio>
-                            <div class="desc">Converted to Chinese</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/vietnamese__PNV_arctic_b0447/to_hindi.wav"></audio>
-                            <div class="desc">Converted to Hindi</div>
                         </td>
 <td>
                             <span class="tag tag-res">Ours</span><br>
                             <audio controls src="task1_samples/vietnamese__PNV_arctic_b0447/to_spanish.wav"></audio>
-                            <div class="desc">Converted to Spanish</div>
                         </td>
                         </tr>
                     </tbody>
@@ -646,7 +610,6 @@
                         <td>
                             <span class="tag tag-res">Result</span><br>
                             <audio controls src="MToF/p226_p226_014_female.wav"></audio>
-                            <div class="desc">Converted to Female</div>
                         </td>
                     </tr>
 
@@ -662,7 +625,6 @@
                         <td>
                             <span class="tag tag-res">Result</span><br>
                             <audio controls src="FToM/p264_p264_014_F.wav"></audio>
-                            <div class="desc">Converted to Male</div>
                         </td>
                     </tr>
                 </tbody>
