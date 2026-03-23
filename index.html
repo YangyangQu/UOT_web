@@ -15,13 +15,41 @@
             background-color: #fff;
         }
 
-        header { text-align: center; margin-bottom: 50px; }
-        h1 { font-family: 'Google Sans', sans-serif; font-size: 2.5rem; margin-bottom: 10px; }
-        h2 { font-size: 1.5rem; color: #555; font-weight: normal; margin-top: 0; }
-        .authors { color: #007bff; margin-top: 20px; font-size: 1.1rem; }
-        .affiliations { color: #666; font-size: 0.9rem; margin-top: 5px; }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-        section { margin-bottom: 60px; }
+        h1 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            line-height: 1.25;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: #555;
+            font-weight: normal;
+            margin-top: 0;
+        }
+
+        .authors {
+            color: #007bff;
+            margin-top: 20px;
+            font-size: 1.05rem;
+        }
+
+        .affiliations {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 5px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
         h3 {
             font-family: 'Google Sans', sans-serif;
             font-size: 1.8rem;
@@ -30,10 +58,15 @@
             margin-bottom: 20px;
         }
 
+        p {
+            line-height: 1.65;
+        }
+
         .model-figure {
             text-align: center;
             margin: 30px 0;
         }
+
         .model-figure img {
             max-width: 90%;
             height: auto;
@@ -41,6 +74,7 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             border-radius: 8px;
         }
+
         .caption {
             margin-top: 10px;
             color: #666;
@@ -56,15 +90,18 @@
             border-left: 4px solid #007bff;
             padding-left: 10px;
         }
+
         .sample-subblock {
             margin-bottom: 18px;
         }
+
         .sample-subtitle {
             font-size: 1rem;
             font-weight: 600;
             color: #4a4a4a;
             margin: 6px 0 8px 2px;
         }
+
         p.note {
             background-color: #f8f9fa;
             padding: 12px;
@@ -73,6 +110,7 @@
             margin-bottom: 20px;
             border: 1px solid #e9ecef;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -80,558 +118,375 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             table-layout: fixed;
         }
+
         th, td {
             padding: 15px 10px;
             text-align: center;
             border-bottom: 1px solid #eee;
             vertical-align: middle;
         }
-        th { background-color: #f8f9fa; font-weight: 600; color: #444; }
-        tr:hover { background-color: #fafafa; }
 
-        audio { width: 200px; max-width: 100%; height: 35px; }
-        .desc { font-size: 0.82rem; color: #777; margin-top: 4px; }
-        .tag {
-            display: inline-block;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            margin-bottom: 6px;
+        th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #444;
         }
-        .tag-src { background-color: #e3f2fd; color: #0d47a1; }
-        .tag-ref { background-color: #f3e5f5; color: #4a148c; }
-        .tag-res { background-color: #e8f5e9; color: #1b5e20; }
-        .tag-empty { background-color: #eeeeee; color: #616161; }
+
+        tr:hover {
+            background-color: #fafafa;
+        }
+
+        audio {
+            width: 200px;
+            max-width: 100%;
+            height: 35px;
+        }
+
+        .desc {
+            font-size: 0.86rem;
+            color: #555;
+            margin-top: 10px;
+            line-height: 1.5;
+            white-space: normal;
+            word-break: break-word;
+            text-align: center;
+        }
+
+        .target-cell {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .target-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-height: 120px;
+        }
+
+        .target-pill {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .target-text {
+            max-width: 230px;
+            font-size: 0.95rem;
+            line-height: 1.45;
+            color: #555;
+            text-align: center;
+            white-space: normal;
+            word-break: break-word;
+        }
+
+        .accent-chinese {
+            background: #e8f0fe;
+            color: #3367d6;
+        }
+
+        .accent-hindi {
+            background: #fef3d6;
+            color: #9a6b00;
+        }
+
+        .accent-spanish {
+            background: #fde7e9;
+            color: #c62828;
+        }
+
+        .accent-vietnamese {
+            background: #dff3e4;
+            color: #2e7d32;
+        }
+
+        .accent-korean {
+            background: #ede7f6;
+            color: #6a1b9a;
+        }
+
+        .accent-arabic {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .accent-default {
+            background: #eceff1;
+            color: #455a64;
+        }
+
+        .source-label {
+            font-size: 0.92rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .ref-block {
+            margin-top: 28px;
+            padding: 14px 16px;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .ref-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .ref-item {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .error-box {
+            color: #b42318;
+            font-size: 0.95rem;
+            margin: 10px 0 20px;
+        }
 
         @media (max-width: 900px) {
-            body { padding: 24px 12px; }
-            th, td { padding: 10px 6px; }
-            audio { width: 150px; }
+            body {
+                padding: 24px 12px;
+            }
+
+            th, td {
+                padding: 10px 6px;
+            }
+
+            audio {
+                width: 150px;
+            }
+
+            .target-text {
+                max-width: 150px;
+                font-size: 0.88rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>SPOT-AC: Subspace Optimal Transport for Training-Free Zero-Shot Accent Conversion</h1>
-        <h2>Audio Demo Page</h2>
+<header>
+    <h1>SPOT-AC: Subspace Optimal Transport for Training-Free Zero-Shot Accent Conversion</h1>
+    <h2>Audio Demo Page</h2>
+    <div class="authors">Anonymous Authors</div>
+    <div class="affiliations">Under Review</div>
+</header>
 
-        <div class="authors">
-            <span class="author">Anonymous Authors</span>
-        </div>
-        <div class="affiliations">Under Review</div>
-    </header>
+<section id="abstract">
+    <h3>Abstract</h3>
+    <p>
+        Zero-shot accent conversion is challenging because the system should modify pronunciation while preserving linguistic content and speaker traits. Many existing approaches rely on large generative models and expensive training pipelines. We present SPOT-AC, a training-free method that edits frozen WavLM frame embeddings instead of training a new voice conversion model. The method is based on a simple idea: accent-related variation can be edited in an accent-sensitive subspace with limited changes to the full representation. We learn this subspace with a one-time linear calibration, reduce its overlap with gender, and estimate a target-accent shift with unbalanced optimal transport against a target-accent bank. The shifted embeddings are then refined by retrieval and resynthesized with a frozen vocoder. Experiments on L2-ARCTIC show that SPOT-AC improves target-accent accuracy and ASR transcript consistency over accent-aware baselines, while retaining strong speaker resemblance.
+    </p>
+</section>
 
-    <section id="abstract">
-        <h3>Abstract</h3>
-        <p>
-            Zero-shot accent conversion is challenging because the system should modify pronunciation while preserving linguistic content and speaker traits. Many existing approaches rely on large generative models and expensive training pipelines. We present SPOT-AC, a training-free method that edits frozen WavLM frame embeddings instead of training a new voice conversion model. The method is based on a simple idea: accent-related variation can be edited in an accent-sensitive subspace with limited changes to the full representation. We learn this subspace with a one-time linear calibration, reduce its overlap with gender, and estimate a target-accent shift with unbalanced optimal transport against a target-accent bank. The shifted embeddings are then refined by retrieval and resynthesized with a frozen vocoder. Experiments on L2-ARCTIC show that SPOT-AC improves target-accent accuracy and ASR transcript consistency over accent-aware baselines, while retaining strong speaker resemblance.
-        </p>
-    </section>
+<section id="model">
+    <h3>Model Architecture</h3>
+    <p>The overview of our proposed framework.</p>
+    <div class="model-figure">
+        <img src="model.png" alt="Model Architecture Diagram">
+        <div class="caption">Figure 1: Overview of the proposed SPOT-AC framework.</div>
+    </div>
+</section>
 
-    <section id="model">
-        <h3>Model Architecture</h3>
-        <p>
-            The overview of our proposed framework.
-        </p>
+<section id="demos">
+    <h3>Audio Samples</h3>
+    <p class="note">
+        Below are the conversion results. <strong>Task 1</strong> demonstrates accent conversion with baseline comparisons, and <strong>Task 2</strong> demonstrates gender attribute editing.
+    </p>
 
-        <div class="model-figure">
-            <img src="model.png" alt="Model Architecture Diagram">
-            <div class="caption">Figure 1: The proposed architecture of our model.</div>
-        </div>
-    </section>
+    <div class="task-block">
+        <div class="task-title">Task 1: Accent Conversion</div>
+        <div id="task1-error" class="error-box" style="display:none;"></div>
+        <div id="task1-container"></div>
+    </div>
 
-    <section id="demos">
-        <h3>Audio Samples</h3>
-        <p class="note">
-            Below are the conversion results.
-            <strong>Task 1</strong> demonstrates accent conversion, and
-            <strong>Task 2</strong> demonstrates gender attribute editing.
-        </p>
+    <div class="task-block">
+        <div class="task-title">Task 2: Gender Conversion</div>
+        <table>
+            <thead>
+                <tr>
+                    <th width="33%">Source (Input)</th>
+                    <th width="33%">Target Gender (Reference)</th>
+                    <th width="33%">Converted Result (Ours)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <audio controls src="MToF/p226_014.wav"></audio>
+                    </td>
+                    <td>
+                        <audio controls src="FToM/p226_014.wav"></audio>
+                    </td>
+                    <td>
+                        <audio controls src="MToF/p226_p226_014_female.wav"></audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <audio controls src="FToM/p226_014.wav"></audio>
+                    </td>
+                    <td>
+                        <audio controls src="MToF/p226_014.wav"></audio>
+                    </td>
+                    <td>
+                        <audio controls src="FToM/p264_p264_014_F.wav"></audio>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-        <div class="task-block">
-            <div class="task-title">Task 1: Accent Conversion</div>
-            
-            <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 1</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="25%">Source (Chinese)</th>
-                            <th width="25%">Hindi</th>
-<th width="25%">Spanish</th>
-<th width="25%">Vietnamese</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="tag tag-src">Source</span><br>
-                                <audio controls src="task1_samples/chinese__LXC_arctic_a0049/source.wav"></audio>
-                                <div class="desc">Chinese</div>
-                            </td>
-                            <td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/chinese__LXC_arctic_a0049/to_hindi.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/chinese__LXC_arctic_a0049/to_spanish.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/chinese__LXC_arctic_a0049/to_vietnamese.wav"></audio>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+    <div class="ref-block">
+        <div class="ref-title">Baseline References</div>
+        <div class="ref-item">[1] J. Melechovsky, A. Mehrish, B. Sisman, and D. Herremans, “Accent conversion in text-to-speech using multi-level vae and adversarial training,” in TENCON 2024-2024 IEEE Region 10 Conference (TENCON). IEEE, 2024, pp. 473–476.</div>
+        <div class="ref-item">[2] J. Melechovsky, A. Mehrish, B. SISMAN, and D. Herremans, “Dart: Disentanglement of accent and speaker representation in multispeaker text-to-speech,” in Audio Imagination: NeurIPS 2024 Workshop AI-Driven Speech, Music, and Sound Generation.</div>
+    </div>
+</section>
 
-            <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 2</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="25%">Source (Chinese)</th>
-                            <th width="25%">Hindi</th>
-<th width="25%">Spanish</th>
-<th width="25%">Vietnamese</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="tag tag-src">Source</span><br>
-                                <audio controls src="task1_samples/chinese__TXHC_arctic_a0010/source.wav"></audio>
-                                <div class="desc">Chinese</div>
-                            </td>
-                            <td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/chinese__TXHC_arctic_a0010/to_hindi.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/chinese__TXHC_arctic_a0010/to_spanish.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/chinese__TXHC_arctic_a0010/to_vietnamese.wav"></audio>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+<script>
+    const sampleDirs = [
+        'arctic_a0103__full__to_hindi',
+        'arctic_a0221__full__to_vietnamese',
+        'arctic_b0366__full__to_chinese',
+        'arctic_b0501__full__to_hindi'
+    ];
 
-            <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 3</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="25%">Source (Chinese)</th>
-                            <th width="25%">Hindi</th>
-<th width="25%">Spanish</th>
-<th width="25%">Vietnamese</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="tag tag-src">Source</span><br>
-                                <audio controls src="task1_samples/chinese__TXHC_arctic_b0508/source.wav"></audio>
-                                <div class="desc">Chinese</div>
-                            </td>
-                            <td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/chinese__TXHC_arctic_b0508/to_hindi.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/chinese__TXHC_arctic_b0508/to_spanish.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/chinese__TXHC_arctic_b0508/to_vietnamese.wav"></audio>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+    const ACCENT_PRETTY = {
+        chinese: 'Chinese',
+        hindi: 'Hindi',
+        spanish: 'Spanish',
+        vietnamese: 'Vietnamese',
+        korean: 'Korean',
+        arabic: 'Arabic'
+    };
 
-            <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 4</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="25%">Source (Hindi)</th>
-                            <th width="25%">Chinese</th>
-<th width="25%">Spanish</th>
-<th width="25%">Vietnamese</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="tag tag-src">Source</span><br>
-                                <audio controls src="task1_samples/hindi__ASI_arctic_a0277/source.wav"></audio>
-                                <div class="desc">Hindi</div>
-                            </td>
-                            <td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/hindi__ASI_arctic_a0277/to_chinese.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/hindi__ASI_arctic_a0277/to_spanish.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/hindi__ASI_arctic_a0277/to_vietnamese.wav"></audio>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+    function normalizeAccent(s) {
+        return String(s || '').trim().toLowerCase().replace(/[- ]+/g, '_');
+    }
 
-            <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 5</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="25%">Source (Hindi)</th>
-                            <th width="25%">Chinese</th>
-<th width="25%">Spanish</th>
-<th width="25%">Vietnamese</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="tag tag-src">Source</span><br>
-                                <audio controls src="task1_samples/hindi__ASI_arctic_b0259/source.wav"></audio>
-                                <div class="desc">Hindi</div>
-                            </td>
-                            <td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/hindi__ASI_arctic_b0259/to_chinese.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/hindi__ASI_arctic_b0259/to_spanish.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/hindi__ASI_arctic_b0259/to_vietnamese.wav"></audio>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+    function prettyAccent(s) {
+        const key = normalizeAccent(s);
+        return ACCENT_PRETTY[key] || (s ? s.charAt(0).toUpperCase() + s.slice(1) : 'Unknown');
+    }
 
-            <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 6</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="25%">Source (Hindi)</th>
-                            <th width="25%">Chinese</th>
-<th width="25%">Spanish</th>
-<th width="25%">Vietnamese</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="tag tag-src">Source</span><br>
-                                <audio controls src="task1_samples/hindi__ASI_arctic_b0514/source.wav"></audio>
-                                <div class="desc">Hindi</div>
-                            </td>
-                            <td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/hindi__ASI_arctic_b0514/to_chinese.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/hindi__ASI_arctic_b0514/to_spanish.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/hindi__ASI_arctic_b0514/to_vietnamese.wav"></audio>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+    function accentClass(s) {
+        const key = normalizeAccent(s);
+        return ['chinese', 'hindi', 'spanish', 'vietnamese', 'korean', 'arabic'].includes(key)
+            ? `accent-${key}`
+            : 'accent-default';
+    }
 
-            <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 7</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="25%">Source (Spanish)</th>
-                            <th width="25%">Chinese</th>
-<th width="25%">Hindi</th>
-<th width="25%">Vietnamese</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="tag tag-src">Source</span><br>
-                                <audio controls src="task1_samples/spanish__ERMS_arctic_b0272/source.wav"></audio>
-                                <div class="desc">Spanish</div>
-                            </td>
-                            <td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/spanish__ERMS_arctic_b0272/to_chinese.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/spanish__ERMS_arctic_b0272/to_hindi.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/spanish__ERMS_arctic_b0272/to_vietnamese.wav"></audio>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+    function parseMatchInfo(text) {
+        const out = {};
+        for (const line of text.split(/\r?\n/)) {
+            const m = line.match(/^\s*([A-Za-z_]+)\s*:\s*(.*?)\s*$/);
+            if (m) {
+                out[m[1]] = m[2];
+            }
+        }
+        return out;
+    }
 
-            <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 8</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="25%">Source (Spanish)</th>
-                            <th width="25%">Chinese</th>
-<th width="25%">Hindi</th>
-<th width="25%">Vietnamese</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="tag tag-src">Source</span><br>
-                                <audio controls src="task1_samples/spanish__MBMPS_arctic_a0308/source.wav"></audio>
-                                <div class="desc">Spanish</div>
-                            </td>
-                            <td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/spanish__MBMPS_arctic_a0308/to_chinese.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/spanish__MBMPS_arctic_a0308/to_hindi.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/spanish__MBMPS_arctic_a0308/to_vietnamese.wav"></audio>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+    function escapeHtml(str) {
+        return String(str || '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
 
-            <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 9</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="25%">Source (Spanish)</th>
-                            <th width="25%">Chinese</th>
-<th width="25%">Hindi</th>
-<th width="25%">Vietnamese</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="tag tag-src">Source</span><br>
-                                <audio controls src="task1_samples/spanish__NJS_arctic_b0502/source.wav"></audio>
-                                <div class="desc">Spanish</div>
-                            </td>
-                            <td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/spanish__NJS_arctic_b0502/to_chinese.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/spanish__NJS_arctic_b0502/to_hindi.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/spanish__NJS_arctic_b0502/to_vietnamese.wav"></audio>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+    async function readText(path) {
+        const resp = await fetch(path);
+        if (!resp.ok) {
+            throw new Error(`Failed to fetch ${path}`);
+        }
+        return await resp.text();
+    }
 
-            <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 10</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="25%">Source (Vietnamese)</th>
-                            <th width="25%">Chinese</th>
-<th width="25%">Hindi</th>
-<th width="25%">Spanish</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="tag tag-src">Source</span><br>
-                                <audio controls src="task1_samples/vietnamese__PNV_arctic_a0016/source.wav"></audio>
-                                <div class="desc">Vietnamese</div>
-                            </td>
-                            <td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/vietnamese__PNV_arctic_a0016/to_chinese.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/vietnamese__PNV_arctic_a0016/to_hindi.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/vietnamese__PNV_arctic_a0016/to_spanish.wav"></audio>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+    async function buildTask1() {
+        const container = document.getElementById('task1-container');
+        const errorBox = document.getElementById('task1-error');
+        const htmlBlocks = [];
 
-            <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 11</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="25%">Source (Vietnamese)</th>
-                            <th width="25%">Chinese</th>
-<th width="25%">Hindi</th>
-<th width="25%">Spanish</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="tag tag-src">Source</span><br>
-                                <audio controls src="task1_samples/vietnamese__PNV_arctic_b0191/source.wav"></audio>
-                                <div class="desc">Vietnamese</div>
-                            </td>
-                            <td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/vietnamese__PNV_arctic_b0191/to_chinese.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/vietnamese__PNV_arctic_b0191/to_hindi.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/vietnamese__PNV_arctic_b0191/to_spanish.wav"></audio>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+        try {
+            for (let i = 0; i < sampleDirs.length; i++) {
+                const dir = sampleDirs[i];
+                const base = `web_show/${dir}`;
 
-            <div class="sample-subblock">
-                <div class="sample-subtitle">Sample 12</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="25%">Source (Vietnamese)</th>
-                            <th width="25%">Chinese</th>
-<th width="25%">Hindi</th>
-<th width="25%">Spanish</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="tag tag-src">Source</span><br>
-                                <audio controls src="task1_samples/vietnamese__PNV_arctic_b0447/source.wav"></audio>
-                                <div class="desc">Vietnamese</div>
-                            </td>
-                            <td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/vietnamese__PNV_arctic_b0447/to_chinese.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/vietnamese__PNV_arctic_b0447/to_hindi.wav"></audio>
-                        </td>
-<td>
-                            <span class="tag tag-res">Ours</span><br>
-                            <audio controls src="task1_samples/vietnamese__PNV_arctic_b0447/to_spanish.wav"></audio>
-                        </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-        </div>
+                const [matchInfoText, inputTextRaw] = await Promise.all([
+                    readText(`${base}/prev_match_info.txt`),
+                    readText(`${base}/input_text.txt`)
+                ]);
 
-        <div class="task-block">
-            <div class="task-title">Task 2: Gender Conversion</div>
+                const meta = parseMatchInfo(matchInfoText);
+                const srcAccent = prettyAccent(meta.src_acc || 'unknown');
+                const tgtAccent = prettyAccent(meta.tgt_acc || 'unknown');
+                const tgtClass = accentClass(meta.tgt_acc || '');
+                const inputText = escapeHtml(inputTextRaw.trim());
 
-            <table>
-                <thead>
-                    <tr>
-                        <th width="33%">Source (Input)</th>
-                        <th width="33%">Target Gender (Reference)</th>
-                        <th width="33%">Converted Result (Ours)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <span class="tag tag-src">Male</span><br>
-                            <audio controls src="MToF/p226_014.wav"></audio>
-                        </td>
-                        <td>
-                            <span class="tag tag-ref">Female Ref</span><br>
-                            <audio controls src="FToM/p226_014.wav"></audio>
-                        </td>
-                        <td>
-                            <span class="tag tag-res">Result</span><br>
-                            <audio controls src="MToF/p226_p226_014_female.wav"></audio>
-                        </td>
-                    </tr>
+                htmlBlocks.push(`
+                    <div class="sample-subblock">
+                        <div class="sample-subtitle">Sample ${i + 1}</div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th width="16%">Target</th>
+                                    <th width="21%">Source (${escapeHtml(srcAccent)})</th>
+                                    <th width="21%">MLV [1]</th>
+                                    <th width="21%">DART [2]</th>
+                                    <th width="21%">Ours</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="target-cell">
+                                        <div class="target-wrap">
+                                            <span class="target-pill ${tgtClass}">${escapeHtml(tgtAccent)}</span>
+                                            <div class="target-text">${inputText}</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="source-label">Source</div>
+                                        <audio controls src="${base}/prev_original.wav"></audio>
+                                    </td>
+                                    <td>
+                                        <audio controls src="${base}/mlvae_adv_converted.wav"></audio>
+                                    </td>
+                                    <td>
+                                        <audio controls src="${base}/dart_converted.wav"></audio>
+                                    </td>
+                                    <td>
+                                        <audio controls src="${base}/prev_converted.wav"></audio>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                `);
+            }
 
-                    <tr>
-                        <td>
-                            <span class="tag tag-src">Female</span><br>
-                            <audio controls src="FToM/p226_014.wav"></audio>
-                        </td>
-                        <td>
-                            <span class="tag tag-ref">Male Ref</span><br>
-                            <audio controls src="MToF/p226_014.wav"></audio>
-                        </td>
-                        <td>
-                            <span class="tag tag-res">Result</span><br>
-                            <audio controls src="FToM/p264_p264_014_F.wav"></audio>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            container.innerHTML = htmlBlocks.join('\n');
+        } catch (err) {
+            console.error(err);
+            errorBox.style.display = 'block';
+            errorBox.textContent = `Failed to load Task 1 samples: ${err.message}`;
+        }
+    }
 
-    </section>
+    buildTask1();
+</script>
 
 </body>
 </html>
