@@ -1,0 +1,6 @@
+sample_name: arctic_a0221__full__to_vietnamese
+mapped_src_wav: /medias/speech/projects/quy/dataset/L2_ARCTIC/wav16/ERMS/wav/arctic_a0221.wav
+transcript_path: /medias/speech/projects/quy/dataset/L2_ARCTIC_16k/ERMS/transcript/arctic_a0221.txt
+speaker_id: ERMS
+target_accent: Vietnamese
+generated_wav: /medias/speech/projects/quy/voice_conversion/UOT_vc/Baseline/DART/output/result/L2ARCTIC16/prev14_aligned_dart/_tmp/96000/ERMS_Vietnamese_I don't know why you're here at all.wav

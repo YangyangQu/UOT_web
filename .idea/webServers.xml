@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="905f990d-d211-404c-960e-28ba6cea0d84" name="circa02">
-        <fileTransfer accessType="SFTP" host="circa02" port="22" sshConfigId="35c061a9-3274-46fb-bd5c-0a5c4f127e1b" sshConfig="quy@circa02:22 password">
+        <fileTransfer accessType="SFTP" host="circa03" port="22" sshConfigId="35c061a9-3274-46fb-bd5c-0a5c4f127e1b" sshConfig="quy@circa03:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

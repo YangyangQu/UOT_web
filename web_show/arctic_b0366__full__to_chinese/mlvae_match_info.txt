@@ -1,0 +1,6 @@
+sample_name: arctic_b0366__full__to_chinese
+mapped_src_wav: /medias/speech/projects/quy/dataset/L2_ARCTIC/wav16/YDCK/wav/arctic_b0366.wav
+transcript_path: /medias/speech/projects/quy/dataset/L2_ARCTIC_16k/YDCK/transcript/arctic_b0366.txt
+speaker_id: YDCK
+target_accent: Chinese
+generated_wav: /medias/speech/projects/quy/voice_conversion/UOT_vc/Baseline/Accented-TTS-MLVAE-ADV/output/result/MLVAEv2CMUsingle128k/prev14_aligned_mlvae_adv/_tmp/295000/YDCK_Chinese_I forgot how easily I had taught myself from the printed page.wav

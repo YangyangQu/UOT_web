@@ -1,0 +1,6 @@
+sample_name: arctic_a0103__full__to_hindi
+mapped_src_wav: /medias/speech/projects/quy/dataset/L2_ARCTIC/wav16/HQTV/wav/arctic_a0103.wav
+transcript_path: /medias/speech/projects/quy/dataset/L2_ARCTIC_16k/HQTV/transcript/arctic_a0103.txt
+speaker_id: HQTV
+target_accent: Hindi
+generated_wav: /medias/speech/projects/quy/voice_conversion/UOT_vc/Baseline/DART/output/result/L2ARCTIC16/prev14_aligned_dart/_tmp/96000/HQTV_Hindi_But there came no promise from the bow of the canoe.wav

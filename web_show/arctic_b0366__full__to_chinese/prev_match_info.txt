@@ -1,0 +1,8 @@
+converted_input: /medias/speech/projects/quy/voice_conversion/UOT_vc/UOT_arctic/sensitivity_pairs4000/web_show/samples/arctic_b0366__full__to_chinese.wav
+converted_key: arctic_b0366__full__to_chinese.wav
+mapped_src_wav: /medias/speech/projects/quy/dataset/L2_ARCTIC/wav16/YDCK/wav/arctic_b0366.wav
+src_acc: korean
+tgt_acc: chinese
+copied_converted: True
+copied_original: True
+match_status: ok
